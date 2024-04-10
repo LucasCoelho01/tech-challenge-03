@@ -1,7 +1,10 @@
 version: '3.8'
 
 services:
-
+  api:
+    image: lucasgoleiro/techchallenge3
+    ports:
+      - "8080:8080"
   mongodb:
     image: mongo
     restart: always
@@ -10,3 +13,4 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: mongo
       MONGO_INITDB_ROOT_PASSWORD: mongo
+      MONGO_INITDB_DATABASE: tech_challenge_db
